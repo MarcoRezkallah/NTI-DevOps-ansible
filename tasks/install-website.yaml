@@ -1,0 +1,5 @@
+- name: Install Website
+  copy:
+    src: index.html
+    dest: /usr/share/nginx/html/index.html
+  notify: restart nginx

@@ -1,0 +1,30 @@
+- include_tasks: tasks/install-nginx.yaml
+- include_tasks: tasks/run-nginx.yaml
+- include_tasks: tasks/install-website.yaml
+
+
+# - name: Install epel-release
+#   yum:
+#     name: epel-release
+#     state: latest
+#     update_cache: yes
+
+# - name: Install the latest version of Nginx
+#   yum:
+#     name: nginx
+#     state: latest
+#     update_cache: yes
+
+
+# - name: Ensure that Nginx is started
+#   service:
+#     enabled: yes
+#     name: nginx
+#     state: started
+
+
+# - name: Install Website
+#   copy:
+#     src: index.html
+#     dest: /usr/share/nginx/html/index.html
+#   # notify: restart nginx

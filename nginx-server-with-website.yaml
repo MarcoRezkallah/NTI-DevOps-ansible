@@ -1,0 +1,13 @@
+- name: Update web servers
+  hosts: web-servers
+  remote_user: centos
+  become: true
+  roles:
+    - nginx-website
+
+  handlers:
+    - name: restart nginx
+      service:
+        enabled: yes
+        name: nginx
+        state: restarted

@@ -1,3 +1,5 @@
+# install nginx
+
 - name: Update web servers
   hosts: web-servers
   remote_user: centos
